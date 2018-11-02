@@ -3,9 +3,23 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.leesanghyuk.mapper.UserMapper">
-    <insert id="save" parameterType="com.leesanghyuk.model.User"
+    <insert id="saveUser" parameterType="user"
             useGeneratedKeys="true">
         INSERT INTO TB_USER(name,sex,age) VALUES (#{name},#{sex},#{age})
     </insert>
+
+    <select id="selectUser" parameterType="int" resultType="user">
+        SELECT * FROM TB_USER WHERE id=#{id}
+    </select>
+
+    <update id="modifyUser" parameterType="user">
+        UPDATE TB_USER
+        SET name=#{name},sex=#{sex},age=#{age}
+        WHERE id=#{id}
+    </update>
+
+    <delete id="removeUser" parameterType="int">
+        DELETE FROM TB_USER WHERE id=#{id}
+    </delete>
 
 </mapper>

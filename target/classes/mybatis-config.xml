@@ -8,6 +8,10 @@
     <settings>
         <setting name="logImpl" value="LOG4J"/>
     </settings>
+    <!--typeAliases-->
+    <typeAliases>
+        <typeAlias type="com.leesanghyuk.model.User" alias="user"/>
+    </typeAliases>
     <!--环境配置，即连接的数据库-->
     <environments default="mysql">
         <environment id="mysql">
