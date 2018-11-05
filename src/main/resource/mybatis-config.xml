@@ -6,7 +6,10 @@
 <configuration>
     <!--指定MyBatis所用日志的具体实现-->
     <settings>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
         <setting name="logImpl" value="LOG4J"/>
+        <setting name="cacheEnabled" value="true"/>
     </settings>
     <!--typeAliases-->
     <typeAliases>
